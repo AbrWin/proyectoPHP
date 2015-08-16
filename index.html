@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!--!!!IMPORTANTE!! DESDE AQUI SE IMPORTAN TODOS LOS ARCHIVOS EXTERNOS QUE VAMOS A OCUPAR-->
+        <!--ESTOY USANDO CSS Y BOOTSTRAP PARA DARLE MAS ESTILO A MI PAGINA ;)-->
+        <link rel="stylesheet" href="utils/bootstrap-3.3.5-dist/css/bootstrap.min.css">          
+        <link type="text/css" rel="stylesheet" href="css/myStyle.css">
+        <script src="js/jquery.min.js"></script>
+        <script type='text/javascript' src='js/actions.js'></script>
+        <script src="utils/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <meta charset="UTF-8">
+        <!--titulo de la pagina-->
+        <title>Formulario</title>
+    </head>
+    <body class="myBody">
+
+        <div class="modal fade" id="myModal" tabindex="-3" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">ERROR</h4>
+                    </div>
+                    <div class="modal-body">  
+                        <h1 id="msjError"></h1>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Regresar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container theme-showcase" role="main">
+            <div class="jumbotron">
+                <h1><span class="glyphicon glyphicon-education" aria-hidden="true"></span>Actividad 4</h1>
+                <p><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Sitio web con PHP</p>
+            </div>            
+            <div class="row">
+                <div id="bordeDiv">
+                    <h2 class="text-center"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Crea un usuario!!</h2>         
+                </div>               
+            </div>
+
+            <div class="row row-centered" style="margin-top: 20px">
+                <div id="divForm">
+                    <form action="registro.php" method="POST" class="form-horizontal">
+                        <h2 class="text-center"><span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Ingresa los datos al formulario</h2>    
+                        <div class="form-group">
+                            <div class="col-sm-8">
+                                <label for="inputEmail"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email</label>
+                                <input type="email" name="inputEmail" class="form-control" id="email" placeholder="Email" required="true">
+                            </div>
+                        </div>
+                        <div class="form-group">                           
+                            <div class="col-sm-8">
+                                <label for="inputPassword"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span>  Password</label>
+                                <input type="password" name="inputPassword" class="form-control" id="password" placeholder="Password" required="true">
+                            </div>
+                        </div>
+                        <div class="form-group">                           
+                            <div class="col-sm-8">
+                                <label for="inputUser"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Usuario</label>
+                                <input type="text" name="inputUser" class="form-control" id="user" placeholder="Usuario" required="true">
+                            </div>
+                        </div>  
+                        <div class="form-group">                           
+                            <div class="col-sm-8">
+                                <label for="inputUser"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Genero</label>
+                                <input type="text" name="inputGenre" class="form-control" id="genero" placeholder="Usuario" required="true">
+                            </div>
+                        </div>  
+                        
+                        <div class="form-group">
+                            <div class="col-sm-8">
+                                <button type="submit" name="sumit" class="btn btn-primary col-lg-5 btn-lg" data-toggle="modal"  id="sendInfo"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>            
+            </div>           
+        </div>
+    </body>
+</html>
